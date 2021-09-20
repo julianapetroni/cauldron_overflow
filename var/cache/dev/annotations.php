@@ -62,11 +62,15 @@ return [[
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%23addLink' => 1,
 'Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 0,
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 1,
+'App%5CController%5CCommentController' => 0,
+'[C]App%5CController%5CCommentController' => 1,
+'App%5CController%5CCommentController%23commentVote' => 2,
+'[C]App%5CController%5CCommentController%23commentVote' => 1,
 'App%5CController%5CQuestionController' => 0,
 '[C]App%5CController%5CQuestionController' => 1,
-'App%5CController%5CQuestionController%23homepage' => 2,
+'App%5CController%5CQuestionController%23homepage' => 3,
 '[C]App%5CController%5CQuestionController%23homepage' => 1,
-'App%5CController%5CQuestionController%23show' => 3,
+'App%5CController%5CQuestionController%23show' => 4,
 '[C]App%5CController%5CQuestionController%23show' => 1,
 'Symfony%5CBundle%5CFrameworkBundle%5CController%5CRedirectController' => 0,
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CRedirectController' => 1,
@@ -168,7 +172,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1631201157,
+1 => 1632122956,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -178,7 +182,12 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/',
+                    '/comments/{id}/vote/{direction<up|down>}',
+                ],
+                'methods' => [
+                    [
+                        'POST',
+                    ],
                 ],
             ],
         ],
@@ -197,7 +206,32 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
+                    '/',
+                ],
+                'name' => [
+                    'app_homepage',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+4 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
                     '/questions/{slug}',
+                ],
+                'name' => [
+                    'app_question_show',
                 ],
             ],
         ],

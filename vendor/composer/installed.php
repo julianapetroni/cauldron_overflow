@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '88641e7478af0636aa625043eb8a5617ff7d1be5',
+        'reference' => '9724d056fceed550e4e7ab6ef2c01a2fd8db47ec',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '88641e7478af0636aa625043eb8a5617ff7d1be5',
+            'reference' => '9724d056fceed550e4e7ab6ef2c01a2fd8db47ec',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -499,6 +499,15 @@
             'aliases' => array(),
             'reference' => '95fb24b09551688a09cffac95a2ddbb907833f07',
             'dev_requirement' => true,
+        ),
+        'symfony/webpack-encore-bundle' => array(
+            'pretty_version' => 'v1.12.0',
+            'version' => '1.12.0.0',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../symfony/webpack-encore-bundle',
+            'aliases' => array(),
+            'reference' => '9943a59f8551b7a8181e19a2b4efa60e5907c667',
+            'dev_requirement' => false,
         ),
         'symfony/yaml' => array(
             'pretty_version' => 'v5.3.6',
